@@ -13,7 +13,9 @@ export default function List() {
   const [artists, setArtists] = useState<Artist[]>([]);
 
   return (
-<div className="jusify-center max-w-sm mx-auto">
+   
+<div className="jusify-center max-w-sm mx-auto mt-10">
+<h3>Add to the list</h3>
 <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()} className="max-w-md mx-auto">   
     <label form="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
