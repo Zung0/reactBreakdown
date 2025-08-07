@@ -1,25 +1,21 @@
-import Footer from "./components/footer";
+
 import List from "./components/list";
-import NavbarDefault from "./components/navbar";
+
 import TicTacToeGame from "./components/tictactoe";
+import RootLayout from "./layout";
 
 
 export default function Home() {
   return (
     
       
-      <div>
-      <NavbarDefault/>
-      <List/>
+        <div className="grid grid-cols-2 grid-rows-1 gap-4">
+        <div ><List/></div>
+          <div ><TicTacToeGame/></div>
+        </div>
+     
+      
 
-      <Footer/>
-      <div className="flex justify-center mt-10">
-        <TicTacToeGame/>
-      </div>
-      
-   
-      </div> 
-      
     
    );
 }
