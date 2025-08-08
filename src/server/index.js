@@ -44,17 +44,10 @@ app.post('/api/postList', async function(req, res){
   }
 });
 
-app.get('/api/getList', async function(req, res){
-  try {
-    const todoList = await ToDoList.find();
-    res.send(todoList);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error getting document');
-  }
-});
+
 
 app.post('/api/modifyList', async function(req, res){
+    console.log("modify triggered");
  const { id, name, checked } = req.query;
   try {
     const todoList = await ToDoList.findOneAndUpdate({ _id: id }, { name, checked }, { new: true });
